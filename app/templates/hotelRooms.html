@@ -1,0 +1,35 @@
+<!-- hotelRooms.html -->
+
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<nav class="navbar">
+				
+					<button type="button" class="btn col-md-2" ng-click="vm.changeDatesClick()">
+						<span class="glyphicon glyphicon-chevron-left"/> Change 
+						Dates
+					</button>
+					<p class="navbar-text text-center col-md-7"> <b>From</b> {{vm.checkInDate.toDateString()}} <b>To</b>      {{vm.checkOutDate.toDateString()}} </p>
+					<button type="button" class="btn col-md-2" ng-click="vm.onBookRoomsClick()">
+						Book rooms <span class="glyphicon glyphicon-chevron-right"/>
+					</button>
+				
+		</nav>
+	</div>
+	<div class="panel-body">	
+		<table class="table" >
+			<thead>
+				
+			</thead>
+			<tbody>
+				<tr ng-repeat="room in vm.roomsList">
+					<td>{{room.totalAvailable}}</td>
+					<td>{{room.type}}</td>
+					<td>{{room.price | currency}}</td>
+					<td><button class="btn">Book Now</button></td>
+					<td><button class="btn">i</button></td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+</div>

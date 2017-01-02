@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app='bookingsAppModule'>
+
+<head>
+	<title>Base7 Booking App</title>
+	
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="lib/main.css">
+
+</head>
+
+<body>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<!-- <section class="container">
+				<img src="assets/img/travel-banner.jpg" class="col-md-12 nav-justified  img-thumbnail" />
+			</section> -->
+
+			<div>
+				<img src="assets/img/travel-banner.jpg" class=" nav-justified  img-thumbnail" />
+			</div>
+
+
+			<nav>
+				<ul class="pagination pagination-lg ">
+					<li ><a ui-sref="home"><span class="badge">1</span> Dates & Rooms</a></li>
+			 	    <li ><a ui-sref="details"><span class="badge">2</span> Your Details</a></li>
+			  		<li ><a ui-sref="review"><span class="badge">3</span> Review & Confirm</a></li>
+			  		<li ><a ui-sref="done"><span class="badge">4</span> Done</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+		
+		<div class="panel-body">
+			<ui-view/>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angular-ui-router.js"></script>
+	<script type="text/javascript" src="lib/angular-resource.min.js"></script>
+	<script type="text/javascript" src="lib/angular-route.min.js"/>	
+	<script type="text/javascript" src="lib/angular-mocks.js"></script>
+	<script type="text/javascript" src="lib/moment.min.js"></script>
+	<script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="lib/angular-mocks.js"></script>
+	
+	<script type="text/javascript" src="app/common/app.module.js"></script>
+	<script type="text/javascript" src="app/common/app.config.js"></script>
+	<script type="text/javascript" src="app/common/datesController.js"></script>
+	<!-- <script type="text/javascript" src="js/hotelRoomsController.js"></script> -->
+	<script type="text/javascript" src="app/common/mock/hotelListResourceMock.js"></script>
+	<script type="text/javascript" src="app/common/services/common.services.js"></script>
+	<script type="text/javascript" src="app/common/services/productResource.js"></script>
+	<script type="text/javascript" src="app/common/services/productResourceMock.js"></script>
+	<script type="text/javascript" src="app/common/hotelRoomsController.js"></script> 
+	
+</body>
+</html>

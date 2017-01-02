@@ -1,0 +1,35 @@
+<!-- dates1.html -->
+<div class="panel panel-default">
+	
+	<div class="panel-heading nav-justified">
+		<p class="text-center">Please pick your Arrival and Departure dates from calendars below</p>
+	</div>
+	
+	<div class="container">
+	 	<div class="panel-body">
+			<nav class="navbar">
+				
+					<p class="navbar-text text-center col-md-9"> <b>From</b> {{vm.checkInDate.toDateString()}} <b>To</b>      {{vm.checkOutDate.toDateString()}} </p>
+					<button type="button" class="btn col-md-2" ng-click="vm.onShowRooms()">
+						Find rooms <span class="glyphicon glyphicon-chevron-right"/>
+					</button>
+				
+				
+			</nav>
+			<form>
+				<p class="row">
+					<input type="date" name="Check-in" placeholder="Check-in" class="col-md-3 col-md-offset-1"
+							ng-model="vm.checkInDate" min="vm.minDate" required="true"></input>
+					<input type="date" name="Check-out" placeholder="Check-out" class="col-md-3 col-md-offset-2"
+							ng-model="vm.checkOutDate" min="vm.minDate" required="true"></input>
+				</p>
+					
+				<p class="text-center">
+					<button type="submit" class="btn btn-primary col-md-2" ng-click="vm.onShowRooms()">Find Rooms</button>
+				</p>
+						<!-- <a ui-sref="rooms" class="btn btn-primary col-md-2 col-md-offset-1">Find Rooms</a> -->
+					
+			</form>
+		</div>
+	</div>
+</div>
